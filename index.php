@@ -35,11 +35,11 @@
 
 		<!-- Latest compiled and minified Bootstrap JavaScript, all compiled plugins included -->
 		<script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-		<title>Bootstrap 101 Template (DDC Version!)</title>
+		<title>JavaScript Exercise</title>
 	</head>
 	<body>
 		<div class="container">
-			<h1>Hello, world! I'm a Bootstrap page! :D</h1>
+			<h1>JavaScrip Exercise</h1>
 		</div>
 	</body>
 </html>
