@@ -29,7 +29,7 @@ function rot13() {
 
 		var charCode = char.charCodeAt(0);
 
-		console.log(charCode);
+		//console.log(charCode);
 
 		if(charCode >= 97 && charCode <= 122) {
 			charCode += 13;

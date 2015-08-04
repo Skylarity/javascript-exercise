@@ -36,10 +36,8 @@
 
         <!-- angular.js -->
         <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
-        <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/ngStorage/0.3.7/ngStorage.min.js"></script>
-        <script type="text/javascript"
-                src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.13.0/ui-bootstrap-tpls.min.js"></script>
-        <script type="text/javascript" src="/angular/javascript-exercise.js"></script>
+        <script type="text/javascript" src="angular/javascript-exercise.js"></script>
+        <script type="text/javascript" src="angular/find-controller.js"></script>
 
         <title>JavaScript Exercise</title>
     </head>
@@ -50,7 +48,7 @@
             </div>
         </header>
 
-        <div class="container">
+        <div class="container" ng-controller="FindController as find">
             <div class="row round">
                 <div class="col-md-3">
                     <div class="row">
@@ -81,15 +79,22 @@
                     </div>
                     <div class="row">
                         <div class="padding">
-                            <button class="btn btn-warning" name="find-button" onclick="findWithAngular();">Highlight:
-                            </button>
-                            <input id="find-angular" type="text" name="find-angular" placeholder="With AngularJS!"/>
+                            <input id="find-angular"
+                                   type="text"
+                                   ng-model="findText"
+                                   ng-change="find.highlight(findText);"
+                                   name="find-angular"
+                                   placeholder="Find with AngularJS!"/>
                         </div>
                     </div>
                 </div>
                 <div class="padding">
                     <div class="col-md-9">
-                        <p id="text">
+                        <p>
+                            <span ng-show="findText"><strong>Text to find: </strong>"{{findText}}"</span>
+                        </p>
+
+                        <p id="text" ng-model="paragraph">
                             When he was nearly thirteen, my brother Jem got his arm badly broken at the elbow. When it
                             healed, and Jem's fears of never being able to play football were assuaged, he was seldom
                             self-conscious about his injury. His left arm was somewhat shorter than his right; when he
