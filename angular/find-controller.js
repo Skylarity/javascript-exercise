@@ -10,6 +10,8 @@ app.controller("FindController", function($scope) {
 		// Replace word in the text
 		// "<span style='background: yellow'>" + find + "</span>"
 		var regexMatches = this.text.match(regex);
+
+		// Sort of almost-working hacky replacement of the match and not the expression
 		var replacement = this.text.replace(regex, "<span style='background: yellow'>" + regexMatches[0] + "</span>");
 
 		// Put it back in the element
