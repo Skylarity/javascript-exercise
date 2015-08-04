@@ -91,7 +91,7 @@
                 <div class="padding">
                     <div class="col-md-9">
                         <p>
-                            <span ng-show="findText"><strong>Text to find: </strong>"{{findText}}"</span>
+                            <span ng-show="findText"><strong>RegExp to find: </strong>{{findText}}</span>
                         </p>
 
                         <p id="text" ng-model="paragraph">
